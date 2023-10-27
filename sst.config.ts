@@ -1,14 +1,15 @@
-import { SSTConfig } from "sst";
-import { API } from "./stacks/KataruStack";
+import { SSTConfig } from 'sst'
+
+import { API } from './stacks/KataruStack'
 
 export default {
-  config(_input) {
+  config() {
     return {
-      name: "back-sst",
-      region: "us-east-1",
-    };
+      name: 'back-sst',
+      region: 'ap-northeast-1',
+    }
   },
   stacks(app) {
-    app.stack(API);
-  }
-} satisfies SSTConfig;
+    app.stack(API)
+  },
+} satisfies SSTConfig

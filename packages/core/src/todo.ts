@@ -1,22 +1,24 @@
-export * as Todo from "./todo";
-import { z } from "zod";
-import crypto from "crypto";
+import crypto from 'crypto'
 
-import { event } from "./event";
+import { z } from 'zod'
+
+import { event } from './event'
+
+export * as Todo from './todo'
 
 export const Events = {
-  Created: event("todo.created", {
+  Created: event('todo.created', {
     id: z.string(),
   }),
-};
+}
 
 export async function create() {
-  const id = crypto.randomUUID();
+  const id = crypto.randomUUID()
   // write to database
 
   await Events.Created.publish({
     id,
-  });
+  })
 }
 
 export function list() {
@@ -24,6 +26,6 @@ export function list() {
     .fill(0)
     .map((_, index) => ({
       id: crypto.randomUUID(),
-      title: "Todo #" + index,
-    }));
+      title: 'Todo #' + index,
+    }))
 }
