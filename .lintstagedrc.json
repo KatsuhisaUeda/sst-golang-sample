@@ -1,0 +1,7 @@
+{
+  "*.{js,cjs,mjs,ts,svelte}": [
+    "prettier --write --plugin @ianvs/prettier-plugin-sort-imports",
+    "eslint"
+  ],
+  "*.{html,json,yaml,yml}": "prettier --write --plugin @ianvs/prettier-plugin-sort-imports"
+}

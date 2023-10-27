@@ -1,0 +1,9 @@
+{
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "importOrder": ["<BUILTIN_MODULES>", "", "<THIRD_PARTY_MODULES>", "", "^[./]"],
+  "importOrderTypeScriptVersion": "5.2.0",
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"]
+}
