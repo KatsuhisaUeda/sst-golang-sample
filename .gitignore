@@ -13,3 +13,8 @@ node_modules
 
 # local env files
 .env*.local
+
+# CDK-specific
+cdk.context.json
+.cdk.staging
+cdk.out
