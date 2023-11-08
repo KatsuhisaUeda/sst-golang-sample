@@ -28,6 +28,6 @@ export function API({ stack }: StackContext) {
   // backend.cdk.cluster.enableFargateCapacityProviders()
 
   stack.addOutputs({
-    ApiEndpoint: backend.url,
+    ALB_DnsName: backend.cdk?.applicationLoadBalancer?.loadBalancerDnsName,
   })
 }
